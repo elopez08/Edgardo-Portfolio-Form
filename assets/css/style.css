@@ -235,11 +235,24 @@ article {
 /*We need one more value that needs to be added.  The box, itself, has various of layers that deals with the work.  We need to make sure that also is flex*/
 
 .work figure {
-    flex: 2;
+    flex: 3;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
+}
+
+.main-work-dev {
+    flex: 2 0 100%;
+}
+
+.group-work-dev {
+    flex: 1 0 100%;
+    display: flex;
+    /*If there's empty space, spread it*/
+    justify-content: space-between;
+    /*If the block reaches limit, scoot it down*/
+    flex-wrap: wrap;
 }
 
 /* 
@@ -253,15 +266,63 @@ article {
 
 */
 
+.main-work-card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 800px;
+    flex: 0 0 600px;
+    background-color: teal;
+    margin: 10px;
+}
+
+
+
 .work-card {
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
     padding: 10px;
+    width: 600px; /*This is causing it to flex overall*/
     height: 400px;
     flex: 0 0 600px;
     background-color: teal;
     margin: 10px;
+}
+
+.main-photo {
+
+    /*Adding to see if this highlighted thing works.  I'm making the overall card a relative position: */
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.main-resizephoto {
+    position: relative;
+    width:100%;
+    height: 99%;
+    object-fit: cover;
+}
+
+/*I'm making an attempt to have this change color when it is overlaying the picture*/
+.main-overlay {
+
+    position: absolute;
+    background-color:yellow;
+    opacity: 0.3;
+
+}
+
+.main-photo:hover .main-overlay{
+    bottom:0;
+    left: 0;
+    right: 0;
+    height:100%;
 }
 
 
@@ -281,7 +342,8 @@ article {
 .resizephoto {
     position: relative;
     width:100%;
-    height: 370px;
+    height: 99%;
+    object-fit: cover;
 }
 
 /*I'm making an attempt to have this change color when it is overlaying the picture*/
