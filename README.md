@@ -280,10 +280,104 @@ Finally, we have the properties from within the articles.  There are two section
 /* =========== End of Article Design =========== */
 
 
-/* Make sure you write down on what you did to have the color overlay of the picture.  We also need to describe what we did in terms of setting the picture in the frame. */
+There's one more that needs to be emphasized:  The flex wraps.  I needed to make separate sections to have it behave accordingly.  Here are the few that I've used so far:
+
+On the header, there are 3 children divs that are affected.  Identified to this being a parent, I applied the flex wrap:
+
+header {
+
+    padding: 20px 0px 20px 0px;
+    font-family: var(--font-family-one);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
+
+    /*This is what's needed to have the text move.  Remember the following:
+    
+    display:flex causes the purple line
+    justify-content: space-between adds spacing on the contents
+    flex-wrap:wrap: if there is no space, it'll go to another line
+
+    */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+The article (with the three sections) also have flex wraps.  Here's the code for it:
+
+article {
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    /*I'm making an attempt to have the flex property added here.  If we do, all the contents within the article should fall in place*/
+    display: flex;
+    /*We're not aligning the contents here.  The columns are to the left and the contents are at the side of the right*/
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+
+}
+
+There's yet another flex-wrap that I used:
+
+.work figure {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+All the way to the bottom of the contact is another flex-wrap.  Here's the code:
+
+.contact-me nav ul {
+
+    
+    /*Something worth noting about this:  With the justify-content, we had the value of the space defined before.  When we applied it on the HEADER, we shifted THIS list so that it is taken to the right.  If we decrease the size, the space in between THIS content and the HEADER will decrease.  Now the question is:  
+
+    Why did we needed another justify-content here?  Is it by default?*/
+    /*Adding the purple line on it: 
+
+    */
+    display: flex;
+    /* Contents will go below if the screen is small */
+    flex-wrap: wrap;
+    /*There are two more commands being used.  Pay attention carefully:
+    
+    align-items is like the justify-conent, but on the opposite axis.  flex-box operates in the main axis.  We need to be careful since the line above works, by default, on the horizontal axis and the one below follows the vertical axis.  But if we were to define the flex-direction to column, then the main and cross would be flipped.
+
+    Keep in mind that the flex-direction is "row" by default.  Change this to "column" if you want it to be flipped.
+
+    ;*/
+    align-items: center;
+
+    /*This sets how a list item is styled (bullet points, dashes, etc.) and positioned (indented or outdented).  Changed the value to none to hide the bullet points. */
+
+    /* Though another question:  We already defined this to be none in the main section.  Why do we need this here? */
+
+    list-style: none;
+}
 
 
 With this, we have the css structure of the code.  
+
+## What needs to be done to improve
+There are a few things that need to be fixed in order for this to be improved.  I'm going to keep this as a process so that I can update more on what's going on and how to get a better profile:
+
+Let's start on what we have so far as a reference:
+
+-The images have flex-wrap in it so that when the screen size gets smaller, the divs are all lined up vertically.
+-Links on some of the works do lead to another page (there are a few that don't work, which is fine since we need to update our rep)
+-The links on top of the header are working as intended
+-When you hover over the picture, it does highlight in yellow
+-at the bottom where the last article is, it neatly stacks on the information
+-I've also put in a resume as a reference in this site.  Clicking on the resume page takes you there
+-The email link works and you can send an email as corresponded
+
+1. There are a few challenges we need to overcome.  One of them involves using the @media.  The reason why is because the article for the paragraph isn't adjusting it correctly comparing to the others and that is because it constantly changes sizes.  I need to make sure that this does correspond correctly with the other articles.
+2. The first image isn't big.  It needs to be readjusted so that the first one is the giant one
+3. Make the pictures of each of the works a bit better
+4. Further test anything in terms of using different link sources.  I heard there's a bit of a conflict going on with another search tool such as Edge
 
 
 
