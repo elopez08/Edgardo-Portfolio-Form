@@ -1,0 +1,124 @@
+body {
+    background-color: #9b1616;
+  }
+  h1 {
+    color: white;
+    font-weight: bold;
+  }
+  h2 {
+    color: white;
+    font-weight: bold;
+  }
+  h3 {
+    color: white;
+    font-weight: bold;
+  }
+  h4 {
+    color: white;
+    font-weight: bold;
+  }
+  p {
+    color: white;
+
+  }
+  li {
+    color: white;
+    font-weight: bold;
+  }
+
+  th {
+    color: white;
+    font-weight: bold;
+  }
+
+
+  .border{
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+  }
+
+  .red {
+      color: red;
+  }
+
+  .blue {
+      color: blue;
+  }
+
+  .green {
+      color: green;
+  }
+
+  .bigtext {
+      font-size: 50px;
+  }
+
+  .smalltext {
+      font-size: 8px;
+  }
+
+  .boldtext {
+      font-weight: bold;
+  }
+
+  .cursive {
+      font-family : cursive;
+  }
+
+  .center {
+      text-align: center;
+  }
+
+  .styledFont {
+      color: green;
+
+  }
+
+  img.one{
+    height: 75%;
+    width: 75%;
+}
+
+
+
+
+table, th, td{
+border:1px solid black;
+}
+
+.center{
+margin-left: auto;
+margin-right: auto;
+}
+
+th{
+
+font-size: 20pt;
+}
+
+
+
+
+
+
+
+
+
+  /*We're going to need a few changes in our HTML site.  We need the following::
+  -red
+  -blue
+  -green
+  -big text
+  -tiny text
+  -text cedntered
+  -bold text
+  -change font
+  -multiple attributes
+  -class fonts
+
+  Use style:  .name to change something.  Apply it in CSS
+
+
+
+
+  */
