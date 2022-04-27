@@ -461,3 +461,104 @@ article {
 
 /* =========== Start of Contact Me for the Content =========== */
 /* =========== End of Contact Me for the Content =========== */
+
+
+@media only screen and (max-width: 728px)
+{
+    /*We're going to resize the windows so it is going to look good on phone sizes*/
+
+    .banner {
+        height: 150px;
+    }
+    /*Make everything centered*/
+    header {
+        justify-content: center;
+    }
+
+    header img{
+        padding: 10px;
+    }
+
+    header h1 {
+        padding: 5px;
+        text-align: center;
+        height: 100%;
+    }
+
+    header nav {
+        margin-right: 0px;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    /*We're going to have the list be even without margin.  Also, we're going to have them in the center*/
+    header nav ul li {
+        margin-left: 0px;
+        padding: 8px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    /*Have the box inside the image lined up in the center*/
+    .bottom-right {
+        right: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /*Take out the margin off the content since the size is already small*/
+    .content {
+        margin-left: 0px;
+    }
+
+    /*Make sure that the text is going to the center side and not on the right.*/
+    .content h2{
+        text-align: center;
+        padding: 3px;
+    }
+
+    /*We're resizing the window so that it is at 100%, not 25%.  This is so that the box is lining up correctly.  I am also taking out the border from the right and also adding to the bottom*/
+    .about-me aside, .work aside , .contact-me aside {
+        width: 100%;
+        border-right-style: none;
+        border-bottom-style: solid;
+    }
+
+    .about-me figure div{
+        padding: 15px;
+    }
+
+    .about-me figure, .work figure , .contact-me nav {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .main-work-card, .work-card {
+        height: 400px;
+    }
+
+    .work-card{
+        flex: 0 0 97%;
+        width: 100%;
+    }
+
+    .resizephoto{
+        width: 100%;
+    }
+
+    /*Have the contact information be in the center and also take out the border lines*/
+    .contact-me nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-me nav ul li a {
+        border-bottom-style: none;
+    }
+
+
+}
