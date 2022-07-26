@@ -1,23 +1,3 @@
-/*
-
-    We're going to make a structural backbone here so as to show the order of the styles.  Lay them out as carefully as possible.  Use the index html as a guide to see where we need to go for this to happen:
-
-*/
-
-/*
-
-    Use this base: 
-
-*/
-
-/*
-    The base skeleton if you need to make another section
-*/
-/* =========== Start of =========== */
-/* =========== End of =========== */
-
-
-
 /* =========== Start of Universal Declaration =========== */
 * {
     padding: 0;
@@ -44,105 +24,7 @@ a {
 p {
     font-family: var(--font-family-one);
 }
-
-
 /* =========== End of Universal Declaration =========== */
-
-
-/* =========== Start of Header =========== */
-
-
-
-header {
-
-    padding: 20px 0px 20px 0px;
-    font-family: var(--font-family-one);
-    background-color: var(--dark-color);
-    color: var(--dark-color);
-
-    /*This is what's needed to have the text move.  Remember the following:
-    
-    display:flex causes the purple line
-    justify-content: space-between adds spacing on the contents
-    flex-wrap:wrap: if there is no space, it'll go to another line
-
-    */
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-}
-
-header h1 {
-
-    padding: 5px 5px 5px 35px;
-    /*We're taking out the inline display*/
-    /*display: var(--display-inline);*/
-    font-size: 48px;
-    background-color: teal;
-    height: 70px;
-
-}
-
-header nav {
-    background-color: var(--dark-color);
-    padding-top: 15px;
-    margin-right: 70px;
-    float: right;
-    font-family: var(--font-family-one);
-    font-size: 20px;
-    /*Note that there is no inline display*/
-}
-
-header nav ul {
-    list-style-type: none;
-    background-color: var(--dark-color);
-}
-
-header nav ul li {
-    background-color: var(--dark-color);
-    display: var(--display-inline);
-    margin-left: 25px;
-}
-
-/* We're in the header, going to nav, that's inside ul, in the li, and any text that has 'a' in it */
-header nav ul li a {
-    background-color: var(--dark-color);
-    border-bottom-style: solid;     /* Adding solid line on the bottome of text */
-    padding: 0px 10px 0px 10px;                   /*Adding spacing around the text */
-    font-size: 25px;
-}
-
-/* =========== End of Header =========== */
-
-
-/* =========== Start of Banner =========== */
-.banner {
-    height: 250px;
-    position: relative;
-    margin-bottom: 25px;
-    background-image: url("../images/blue-banner.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.bottom-right {
-    position: absolute;         /* This will cause the text to be inside the image */
-    padding: 10px;              /* Have some spacing around the text */
-    background-color: teal;   /* Have a background set behind the color */
-    bottom: 16px;               /* Move it from the bottom */
-    right: 60px;                /* Move it from the right */
-}
-
-.bottom-right h2 {
-    font-size: 35px;            /* Change the size of the font */
-    color: var(--dark-color);             /* Color of the text */
-    font-family: var(--font-family-one);
-    background-color: teal;
-
-}
-
-/* =========== End of Banner =========== */
 
 /* 
     =============================================================
@@ -192,13 +74,6 @@ section {
 article {
     margin-bottom: 20px;
     margin-left: 20px;
-
-    /*I'm making an attempt to have the flex property added here.  If we do, all the contents within the article should fall in place*/
-    display: flex;
-    /*We're not aligning the contents here.  The columns are to the left and the contents are at the side of the right*/
-    /*justify-content: space-between;*/
-    flex-wrap: wrap;
-
 }
 
 
@@ -207,17 +82,16 @@ article {
 /* =========== Start of Article Design =========== */
 
 .about-me, .work, .contact-me {
-    overflow: auto;
-    margin: 0 0 30px 20px;
+    padding: 30px 10px 30px 20px;
+    height: 100%;
+    /*border-right-style: solid;*/
 }
 
-.about-me aside, .work aside , .contact-me aside {
-    /*flex:1;*/
-    width: 200px;
-    padding: 10px 10px 5px 10px;
-    float: left;
-    border-right-style: solid;
 
+.about-me aside, .work aside , .contact-me aside {
+    padding: 10px 10px 5px 10px;
+    height: 100%;
+    border-right-style: solid;
 }
 
 
@@ -277,9 +151,7 @@ article {
     margin: 10px;
 }
 
-
-
-.work-card {
+.work-card-main, .work-card {
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
@@ -289,6 +161,11 @@ article {
     flex: 0 0 600px;
     background-color: teal;
     margin: 10px;
+    width: 97%;
+}
+
+.work-card {
+    width: 600px;
 }
 
 .main-photo {
@@ -325,9 +202,6 @@ article {
     height:100%;
 }
 
-
-
-
 .photo {
 
     /*Adding to see if this highlighted thing works.  I'm making the overall card a relative position: */
@@ -348,15 +222,11 @@ article {
 
 /*I'm making an attempt to have this change color when it is overlaying the picture*/
 .overlay {
-
     position: absolute;
     background-color:yellow;
     opacity: 0.3;
-
 }
-
 .text-box{
-
     width: 100%;
     padding: 20px;
     position: absolute;
@@ -372,16 +242,11 @@ article {
     display: var(--display-inline);
 
 }
-
-
 .icon-clicks {
-
     height: 50px;
     width: 50px;
     float:right;
-    
 }
-
 
 /*
     Okay.  This is going to be a bit tricky to explain, but here's how it goes:
@@ -404,8 +269,6 @@ article {
 /* This section is reserved for the contact information style for the last part */
 
 .contact-me nav {
-    padding-top: 40px;
-    padding-bottom: 40px;
     font-family: var(--font-family-one);
 }
 
@@ -462,13 +325,185 @@ article {
 /* =========== End of Contact Me for the Content =========== */
 
 
+
+/* =========== Start of Header =========== */
+header {
+    /* This is for the graph if it works: */
+    
+    padding: 20px 0px 20px 0px;
+    font-family: var(--font-family-one);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
+
+    /*This is what's needed to have the text move.  Remember the following:
+    display:flex causes the purple line
+    justify-content: space-between adds spacing on the contents
+    flex-wrap:wrap: if there is no space, it'll go to another line
+    */
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    
+    padding: 5px 5px 5px 35px;
+    /*We're taking out the inline display*/
+    /*display: var(--display-inline);*/
+    font-size: 48px;
+    background-color: teal;
+    height: 70px;
+
+}
+
+header nav {
+    background-color: var(--dark-color);
+    padding-top: 15px;
+    margin-right: 70px;
+    float: right;
+    font-family: var(--font-family-one);
+    font-size: 20px;
+    /*Note that there is no inline display*/
+}
+
+header nav ul {
+    list-style-type: none;
+    background-color: var(--dark-color);
+}
+
+header nav ul li {
+    background-color: var(--dark-color);
+    display: var(--display-inline);
+    margin-left: 25px;
+}
+
+/* We're in the header, going to nav, that's inside ul, in the li, and any text that has 'a' in it */
+header nav ul li a {
+    background-color: var(--dark-color);
+    border-bottom-style: solid;     /* Adding solid line on the bottome of text */
+    padding: 0px 10px 0px 10px;                   /*Adding spacing around the text */
+    font-size: 25px;
+}
+/* =========== End of Header =========== */
+
+/* =========== Start of Banner =========== */
+.banner {
+    position: relative;
+    height: 250px;
+    margin-bottom: 25px;
+    background-image: url("../images/blue-banner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom-right {
+    position: absolute;         /* This will cause the text to be inside the image */
+    padding: 10px;              /* Have some spacing around the text */
+    background-color: teal;   /* Have a background set behind the color */
+    bottom: 16px;               /* Move it from the bottom */
+    right: 60px;                /* Move it from the right */
+}
+
+.bottom-right h2 {
+    font-size: 35px;            /* Change the size of the font */
+    color: var(--dark-color);             /* Color of the text */
+    font-family: var(--font-family-one);
+    background-color: teal;
+
+}
+/* =========== End of Banner =========== */
+
+.work-card-main {
+    height: 600px;
+}
+
+/* Start of the grid identity */
+.grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    place-items: center;
+    margin: auto;
+
+    /* Whenever there's a "." on it, it is immediately placed on the position in accordance to the html.  Since there is 4 works that have no .grid > identity, that is automatically placed as a grid */
+    grid-template-areas: "head head head"
+                         "banner banner banner"
+                         "about-me about-para about-para"
+                         "work main-work main-work"
+                         "work main-work main-work"
+                         "work . ."
+                         "work . ."
+                         "contact contact-info contact-info";
+}
+
+/* This is the one that contains THE GRID INFORMATION FOR THE ABOVE */
+.grid > .topinfo {
+    grid-area: head;
+}
+
+.grid > .bannerblock {
+    grid-area: banner;
+
+}
+.grid > .aside_about-me{
+    grid-area: about-me;
+}
+
+.grid > .about-paragraph {
+    grid-area: about-para;
+    width: 100%;
+    padding: 20px;
+}
+
+.grid > .aside_work {
+    grid-area: work;
+}
+
+.grid > .work-area1{
+    grid-area: main-work;
+    width: 100%;
+}
+.grid > .aside-contact{
+    grid-area: contact;
+
+}
+
+.aside_about-me, .aside_work, .aside-contact {
+    height: 100%;
+    width: 100%;
+    text-align: right;
+}
+
+.grid > .contact-information{
+    grid-area: contact-info;
+    width: 100%;
+    margin: 0px;
+}
+
+/*End of Grid Identity*/
+
+.topinfo, .bannerblock {
+    width: 100%;
+}
+
+
+/*Clamp properties*/
+/*
+.banner {
+    width: clamp(728px, 100%);
+    height: clamp(150px, 250px , 728px);
+}
+*/
+
 @media only screen and (max-width: 728px)
 {
     /*We're going to resize the windows so it is going to look good on phone sizes*/
 
+    /*
     .banner {
         height: 150px;
     }
+    */
     /*Make everything centered*/
     header {
         justify-content: center;
@@ -559,6 +594,4 @@ article {
     .contact-me nav ul li a {
         border-bottom-style: none;
     }
-
-
 }

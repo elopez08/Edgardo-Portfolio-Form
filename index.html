@@ -1,32 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-
-    Author:  Edgardo Lopez
-
-    This is an attempt to make a new project with the branches that we're adding in the system.  I've made the bare skeleton for the HTML format as well as added at the comment on what we're adding in the body.  Follow each comment to see what is being added:
-
-    On the overall structure, we need to make the following:
-
-    1. A section involving a title:  Lernantino.  It has on the side of the tab:  About Me, Work, Contact Me, and Resume.  All of them have a teal underline border on each.  The Lernantino is a H1 with a Dark grey font and has a teal background.  On that same line, we have an overall dark grey color matching the letters in Lernantino.
-    2. A section involving a blue strip image with on the lower left having a "Cool Subtitle Here!".  This one has the same format as Lernantino.
-    3. A side section that has About Me, Work, Contact Me.  All will link to the target when clicked from the top
-    4. 
-    5. 
-    6. A "Work" section that has the following:
-        *Surf Report
-        *LED Wall
-        *Calculator
-        *Patzel Puzzles
-        *Run Buddy at the last section
-
-        During this section, the Surf Report is the giant one.  LED wall and Calculator are on the same line.  Patzel Puzzles and the Run Buddy form are in the same line
-    7. A Footer that contains a "Contact Info" with the tabs of: Phone Number, Email, Github, Twitter, and Spotify
-
-    8.  Have "About Me", "Work", and "Contact Info on the side on their respective sections with a border line on it.  This line goes at the top of the text all the way to the bottom of the section.
-
-
--->
 
 <html lang="en-us">
 
@@ -47,91 +20,62 @@
         </title>
 
         <!-- The top of the page with the word Lernantino in it: -->
-        <header>
+        <div class = "grid">
+            <div class = "topinfo">
+                <header>
 
-            <h1>Edgardo Junior Lopez</h1>
-
-            <!-- Nav has the "About Me", "Work", "Contact Me", and "Resume" -->
-            <img src="./assets/images/image-profile.jpg" width="200px" height="200px">
-
-            <nav>
-                <!-- Making an unordered list for the top section -->
-                <ul>
-                    <!--Four Words on the top: "About Me" "Work" "Contact Me" "Resume" -->
-
-                    <!-- About Me Section -->
-                    <li>
-                        <a href = "#about-me">About Me</a>
-                    </li>
-                    <!-- Work Section -->
-                    <li>
-                        <a href = "#work-section">Work</a>
-                    </li>
-                    <!-- Contact Us Section -->
-                    <li>
-                        <a href = "#contact-me-section">Contact Me</a>
-                    </li>
-                    <!-- Resume Section -->
-                    <li>
-                        <a href = "./assets/files/Edgardo Lopez Resume Software PDF File.pdf">Resume</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </header>
-
-        <!--
-
-            Notes in this section.  Here are the notes for it:
-
-            With the section involving "Work", you have 5 different windows: Surf Report, LED Wall, Calculator, Pastel Puzzles, and Run Buddy.  On the "Surf Report", this is the top section of the five.  The others are evenly spread.  There's an even margin on all of them.  In addition to this, when you hover over a window, it'll have a light color overlighting the color.  This one IS NOT affected the window involving the words.
-
-        -->
-
-        <!-- The banner with the blue stripe -->
-
-        <section class="banner" alt="Blue Banner Picture">
-
-            <div class = "bottom-right"> 
-                <h2>Edgardo's Portfolio Site</h2>
-            </div>
-
-        </section>
-
-        <!-- 
-            The Section with the words "About Me", etc that's located in the side.
-            It'll contain on the side a Word and then on the right side, it'll have it's own sections of the article.
-
-            Have the following:
-
-            These are all "Article" style
-
-            About Me:
-
-            On the left, title right align and both words on different lines.
-            Right:  Have a description.
-
-            Work:
-
-            Left: The word "Work", Right aligned
-            Right: Have the works here (there are 5 in total)
-
-            Contact Me
-            Left: Words "Contact Me" in separate lines while being Right Aligned
-            Right: Have the Phone Number, email, GitHub, Twitter, and Spotify words evenly spaced out.  Have all of them with a border line with the same as the one on the Left
+                    <h1>Edgardo Junior Lopez</h1>
         
-        -->
+                    <!-- Nav has the "About Me", "Work", "Contact Me", and "Resume" -->
+                    <img src="./assets/images/image-profile.jpg" width="200px" height="200px">
+        
+                    <nav>
+                        <!-- Making an unordered list for the top section -->
+                        <ul>
+                            <!--Four Words on the top: "About Me" "Work" "Contact Me" "Resume" -->
+        
+                            <!-- About Me Section -->
+                            <li>
+                                <a href = "#about-me">About Me</a>
+                            </li>
+                            <!-- Work Section -->
+                            <li>
+                                <a href = "#work-section">Work</a>
+                            </li>
+                            <!-- Contact Us Section -->
+                            <li>
+                                <a href = "#contact-me-section">Contact Me</a>
+                            </li>
+                            <!-- Resume Section -->
+                            <li>
+                                <a href = "./assets/files/Edgardo Lopez Resume Software PDF File.pdf">Resume</a>
+                            </li>
+                        </ul>
+                    </nav>
+        
+                </header>     
+            </div>
+            <div class = "bannerblock">
+                <section class="banner" alt="Blue Banner Picture">
 
-        <section class="content">
+                    <div class = "bottom-right"> 
+                        <h2>Edgardo's Portfolio Site</h2>
+                    </div>
+        
+                </section>            
+            </div>
+            <div class="aside_about-me">
+                <article id="about-me" class="about-me">
 
-            <!-- About Me Section -->
-            <article id="about-me" class="about-me">
-
-                <!-- This is for the Word Content -->
-                <aside>
-                    <h2>About Me</h2>
-                </aside>
-
+                    <!-- This is for the Word Content -->
+                    <aside>
+                        <h2>About Me</h2>
+                    </aside>
+    
+                    
+                </article>        
+            </div>
+            <div class="about-paragraph">
                 <figure>
                     <!-- This is for the Actual Content -->
                     <div>
@@ -156,227 +100,154 @@
                     </div>
 
                 </figure>
-                
-            </article>
 
-            <!-- Work Section -->
-            <article id="work-section" class="work">
-
-                <!-- This is for the Word Content -->
-                <aside>
-                    <h2>Work</h2>
-                </aside>
-
-                <!-- This is for the Actual Content -->
-                <!--Insert multiple works here to show as a resume-->
-
-                <!-- This will have the multiple works that we're going to use as placeholders or use the files that we have done in class -->
-                <!-- We need at least 5 work/placeholders -->
-
-                <!-- 
-
-                    Each 'card' is going to have the following:
-                    1.  Image that's on the back that will be highlighted in yellow if hover
-                    2.  A text that has a background box that's located at the bottom left of the picture
-
-                    For this, we need to understand that the picture, itself, is relative and the text is absolute.
-
-                    Next, inside the card of the image has two sets of text.  One of them is the title of the project and the other is the file type used for said project.  The title is going to be h3 while the content type of the file is paragraph 'p'
-
-                 -->
+            </div>
+            <div class="aside_work">
+                <article id = "about-me" class = "about-me">
+                    <aside class = "work">
+                        <h2>Work</h2>
+                    </aside>        
+                </article>
+            </div>
+            <div class="work-area1">
+                <div class="work-card-main">
 
 
-                 <!-- I think there's another set of reconstruction:  The big one that stretches across and the other is the grouping of two -->
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
 
-                <figure> <!-- I'm going to make this as a parent -->
+                        <img src = "./assets/images/cartoon-team.jpg" alt="fan page work!" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
 
-                    <!-- This is going to be reserved for the 1st child, which is ONLY ONE CARD -->
+                        <div class = overlay>
 
-                    <div class="main-work-dev"> <!-- This is going to be the definition of the child -->
-
-                        <div class="main-work-card">
-
-                            <!-- Insert first files here -->
-                            <!--\assets\images\dummy-pictures-->
-                            <div class="main-photo">
-    
-                                <img src = "./assets/images/horiseon-demo.PNG" alt="run-buddy work page!" class="main-resizephoto">
-                                    <!-- I'm making an attempt to color the overall picture here -->
-    
-                                <div class = main-overlay>
-    
-                                </div>
-    
-                                <div class="text-box">
-                                    <a href="https://elopez08.github.io/challenge-1/">
-                                        <img src = "./assets/images/website-icon-29482.png" class = "icon-clicks">
-                                    </a>
-                                    <a href="https://github.com/elopez08/challenge-1.git">
-                                        <img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks">
-                                    </a>
-                                    <h3>
-                                       Horiseon Demo Project
-                                    </h3>
-                                    <br/>
-                                    <p>
-                                        HTML, CSS
-                                    </p>
-                                </div>
-                                
-    
-                            </div>
-                            
                         </div>
 
+                        <div class="text-box">
+                            <a href="https://elopez08.github.io/Group-Generator"><img src = "./assets/images/website-icon-29482.png" class = "icon-clicks" ></a>
+                            <a href="https://github.com/elopez08/Group-Generator"><img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks"></a>
+                            <h3>
+                               Group Generator
+                            </h3>
+                            <br/>
+                            <p>
+                                HTML(Generated), CSS, JS, 
+                            </p>
+                        </div>
                     </div>
                     
-
-                    <!-- This is going to be reserved for the 2nd child, WHICH IS EVERYTHING -->
-
-                    <div class="group-work-dev"> <!-- This is going to be the definition of the child -->
-
-                        <div class="work-card">
+                </div>
+            </div>
+            <div class="work-area2">
+                <div class="work-card">
     
 
-                            <!-- Insert first files here -->
-                            <!--\assets\images\dummy-pictures-->
-                            <div class="photo">
-    
-                                <img src = "./assets/images/fan-page-sit.png" alt="fan page work!" class="resizephoto">
-                                    <!-- I'm making an attempt to color the overall picture here -->
-    
-                                <div class = overlay>
-    
-                                </div>
-    
-                                <div class="text-box">
-                                    <img src = "./assets/images/website-icon-29482.png" class = "icon-clicks">
-                                    <img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks">
-                                    <h3>
-                                       Fan Page!
-                                    </h3>
-                                    <br/>
-                                    <p>
-                                        HTML
-                                    </p>
-                                </div>
-                                
-    
-                            </div>
-                            
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
+
+                        <img src = "./assets/images/business-concept-calculator-on-paper-background-with-business-chart-HGCPPN.jpg" alt="'Calculator" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
+
+                        <div class = overlay>
+
                         </div>
-                        <div class="work-card">
-        
-    
-                            <!-- Insert first files here -->
-                            <!--\assets\images\dummy-pictures-->
-                            <div class="photo">
-    
-                                <img src = "./assets/images/business-concept-calculator-on-paper-background-with-business-chart-HGCPPN.jpg" alt="'Calculator" class="resizephoto">
-                                    <!-- I'm making an attempt to color the overall picture here -->
-    
-                                <div class = overlay>
-    
-                                </div>
-    
-                                <div class="text-box">
-                                    <img src = "./assets/images/website-icon-29482.png" class = "icon-clicks">
-                                    <img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks">
-                                    <h3>
-                                       Calculator Function
-                                    </h3>
-                                    <br/>
-                                    <p>
-                                        Check back later!
-                                    </p>
-                                </div>
-                                
-    
-                            </div>
+
+                        <div class="text-box">
+                            <img src = "./assets/images/website-icon-29482.png" class = "icon-clicks">
+                            <img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks">
+                            <h3>
+                               Calculator Function
+                            </h3>
+                            <br/>
+                            <p>
+                                Check back later!
+                            </p>
                         </div>
-                        <div class="work-card">
-        
-    
-                            <!-- Insert first files here -->
-                            <!--\assets\images\dummy-pictures-->
-                            <div class="photo">
-    
-                                <img src = "./assets/images/istockphoto-1217368000-612x612.jpg" alt="'Coming Soon!" class="resizephoto">
-                                    <!-- I'm making an attempt to color the overall picture here -->
-    
-                                <div class = overlay>
-    
-                                </div>
-    
-                                <div class="text-box">
-                                    <img src = "./assets/images/website-icon-29482.png" class = "icon-clicks">
-                                    <img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks">
-                                    <h3>
-                                       Coming Soon!
-                                    </h3>
-                                    <br/>
-                                    <p>
-    
-                                    </p>
-                                </div>
-                                
-    
-                            </div>
-    
-                        </div>
-                        <div class="work-card">
-    
-                            <!-- Insert first files here -->
-                            <!--\assets\images\dummy-pictures-->
-                            <div class="photo">
-    
-                                <img src = "./assets/images/istockphoto-1217368000-612x612.jpg" alt="'Coming Sooon!" class="resizephoto">
-                                    <!-- I'm making an attempt to color the overall picture here -->
-    
-                                <div class = overlay>
-    
-                                </div>
-    
-                                <div class="text-box">
-                                    <img src = "./assets/images/website-icon-29482.png" class = "icon-clicks">
-                                    <img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks">
-                                    <h3>
-                                       Coming Soon!
-                                    </h3>
-                                    <br/>
-                                    <p>
-                                        
-                                    </p>
-                                </div>
-                                
-    
-                            </div>
-                        </div>    
+                        
 
                     </div>
-                    
+                </div>
 
-                </figure>
+            </div>
+            <div class="work-area3">
+                <div class="work-card">
+    
 
-                
-            </article>
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
 
-            <!-- Contact Me Section -->
+                        <img src = "./assets/images/background-password.jpg" alt="'Coming Soon!" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
 
-            <article id="contact-me-section" class="contact-me">
+                        <div class = overlay>
 
-                <!--This is for the Word Content -->
-                <aside>
-                    <h2>Contact Me</h2>
-                </aside>
+                        </div>
 
-                <!-- This is for the Actual Content -->
-                <!--YOU  MAY NEED TO CHANGE THIS NAV.  This is using the
-                same format as above.  It isn't a navigator perse, but
-                it is mostly for the structure. -->
-                
-                <figure>
+                        <div class="text-box">
+                            <a href="https://elopez08.github.io/Password-Generator-Project/"><img src = "./assets/images/website-icon-29482.png" class = "icon-clicks"></a>
+                            <a href="https://github.com/elopez08/Password-Generator-Project"><img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks"></a>
+                            <h3>
+                               Password Generator
+                            </h3>
+                            <br/>
+                            <p>
+                                HTML, JS, CSS
+                            </p>
+                        </div>
+                        
 
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="work-area3">
+                <div class="work-card">
+
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
+
+                        <img src = "./assets/images/sky-background.jpg" alt="'Coming Sooon!" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
+
+                        <div class = overlay>
+
+                        </div>
+
+                        <div class="text-box">
+                            <a href="https://elopez08.github.io/Weather-Report/"><img src = "./assets/images/website-icon-29482.png" class = "icon-clicks"></a>
+                            <a href="https://github.com/elopez08/Weather-Report"><img src = "./assets/images/GitHub-Mark-64px.png" class = "icon-clicks"></a>
+                            <h3>
+                               Weather Report
+                            </h3>
+                            <br/>
+                            <p>
+                                HTML, CSS, JS
+                            </p>
+                        </div>
+                        
+
+                    </div>
+                </div>    
+
+            </div>
+
+            <div class="work-grid-area">
+    
+            </div>
+            <div class="aside-contact">
+                <article id="contact-me-section" class="contact-me">
+                    <aside class = "contact-me">
+                        <h2>Contact Me</h2>
+                    </aside>    
+                </article>
+            </div>
+            <div class="contact-information">
+                <article id="contact-me-section" class="contact-me">
                     <nav>
 
                         <ul>
@@ -397,15 +268,10 @@
                             </li>
                         </ul>
                         
-                    </nav>
-
-                </figure>
-
-
-            </article>
-
-        </section>
-
+                    </nav>    
+                </article>
+            </div>
+        </div>
         <!-- Might have to take this out since there isn't a footer -->
 
         <footer>

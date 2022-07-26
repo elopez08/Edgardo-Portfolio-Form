@@ -1,36 +1,78 @@
-# Run Buddy, Inc
+Private Portfolio
+=========================
 
-## Purpose
-A website that offers fitness training services. 
+By Edgardo Lopez
+-------------------------
 
+## Table of Contents
+==============================
+*   [The Purpose](#the-purpose)
+*   [Critera](#criteria)
+*   [Installation](#installation)
+*   [Usage](#usage)
+*   [The Process](#the-process)
+*   [What Was Done Differently](#differently)
+*   [Built With](#built-with)
+*   [Contributing](#contributing)
+*   [Project Status](#project-status)
+*   [Disclaimer](#disclaimer)
+*   [Website](#website)
+==============================
 
-    ? = is the task still being issued
-    X = the task is there, but it has an error (not similar)
-    Y = yes!  The criteria is met!
+#   [The Purpose](#the-purpose)
+
+There are two purposes:  One, to show my personal portfolio for the others to see when introducing myself.  Two, to contribute on a more public usage by showing how the portfolio was made to aid those making their own portfolio.
+
+#   [Critera](#criteria)
 
     CRITERIA:
 
-    [?]GIVEN I need to sample a potential employee's previous work
+    GIVEN I need to sample a potential employee's previous work
 
-    [?]WHEN I load their portfolio
+    WHEN I load their portfolio
     THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
 
-    [Y]WHEN I click one of the links in the navigation
+    WHEN I click one of the links in the navigation
     THEN the UI scrolls to the corresponding section
 
-    [?]WHEN I click on the link to the section about their work
+    WHEN I click on the link to the section about their work
     THEN the UI scrolls to a section with titled images of the developer's applications
 
-    [?]WHEN I am presented with the developer's first application
+    WHEN I am presented with the developer's first application
     THEN that application's image should be larger in size than the others
 
-    [?]WHEN I click on the images of the applications
+    WHEN I click on the images of the applications
     THEN I am taken to that deployed application
 
-    [?]WHEN I resize the page or view the site on various screens and devices
+    WHEN I resize the page or view the site on various screens and devices
     THEN I am presented with a responsive layout that adapts to my viewport
 
-## THE PROCESS
+#   [Installation](#installation)
+
+Head on over to the GitHub:
+
+When you have a folder location, issue the command:  
+
+```bash
+git clone {link of the project}
+```
+Remember to use a program such as Powershell and have a program like Visual Studio Code to be able to open and edit the project.
+
+#   [Usage](#usage)
+
+Using the file generated as my portfolio as a sample, you are able to click on the various texts that allow you to navigate throughout the page.
+
+((SHOW SCREENSHOT))
+
+The top portion of it located at the right side are links that will traverse throughout the page.  Clicking the "Resume" link will pop out a new page, which will display my resume.  At the bottom portion of the page, you are also able to click on the links below (clicking on my email will get you to the email app that will allow you to contact me via email.  GitHub will send you over to my GitHub portfolio that's in the system).
+
+((SHOW SCREENSHOT WITH SMALLER WINDOW))
+In addition to this, you are also able to change the sizing of the window to indicate the format change that's happening on the page itself (it is using media queries).
+
+
+
+#   [The Process](#the-process)
+
 In order to have this executed as the criteria's agends, I needed to make the following:
 
     -CSS file
@@ -246,8 +288,6 @@ Finally, we have the properties from within the articles.  There are two section
 
 }
 
-
-
 .about-me div, .work figure , .contact-me nav {
     
     float: left;
@@ -255,8 +295,6 @@ Finally, we have the properties from within the articles.  There are two section
     border-left-style: solid;
     padding: 10px 0 10px 40px;
 }
-
-
 
 .contact-me nav {
     padding-top: 40px;
@@ -278,7 +316,6 @@ Finally, we have the properties from within the articles.  There are two section
 }
 
 /* =========== End of Article Design =========== */
-
 
 There's one more that needs to be emphasized:  The flex wraps.  I needed to make separate sections to have it behave accordingly.  Here are the few that I've used so far:
 
@@ -361,34 +398,27 @@ All the way to the bottom of the contact is another flex-wrap.  Here's the code:
 
 With this, we have the css structure of the code.  
 
-## What needs to be done to improve
-There are a few things that need to be fixed in order for this to be improved.  I'm going to keep this as a process so that I can update more on what's going on and how to get a better profile:
 
-Let's start on what we have so far as a reference:
+#  [What Was Done Differently](#differently)
 
--The images have flex-wrap in it so that when the screen size gets smaller, the divs are all lined up vertically.
--Links on some of the works do lead to another page (there are a few that don't work, which is fine since we need to update our rep)
--The links on top of the header are working as intended
--When you hover over the picture, it does highlight in yellow
--at the bottom where the last article is, it neatly stacks on the information
--I've also put in a resume as a reference in this site.  Clicking on the resume page takes you there
--The email link works and you can send an email as corresponded
+From the previous section to the updated, there were a few changes made.  First, I have the media query involved.  With the constant evolution in technology, one of the few things that needed to be done is have an accesability from both Desktop and Mobile devices in case someone were to look at the portfolio from either said devices.  The code itself has a way to reconstruct so that it is neatly laid out as much as possible to show on a different sized screen.
 
-1. There are a few challenges we need to overcome.  One of them involves using the @media.  The reason why is because the article for the paragraph isn't adjusting it correctly comparing to the others and that is because it constantly changes sizes.  I need to make sure that this does correspond correctly with the other articles.
-2. The first image isn't big.  It needs to be readjusted so that the first one is the giant one
-3. Make the pictures of each of the works a bit better
-4. Further test anything in terms of using different link sources.  I heard there's a bit of a conflict going on with another search tool such as Edge
+As more of my work is being added to the system, I changed the properties from "Flex" properties to "Grid".  This will ensure to have a better layout when adding new information in the system.  With this, I was also able to understand the properties of the "Grid" and was able to show a much neater presentation on the page overall.
 
+#   [Built With](#built-with)
 
+    *HTML
+    *CSS
 
-## Built With
-* HTML
-* CSS
-
-## Website
-https://lernantino.github.io/run-buddy/
-
-## Contribution
+#  [Contributing](#contributing)
 Made with ❤️ by [Edgardo Lopez]
 
-### ©️2019 Run Buddy, Inc 
+#  [Project Status](#project-status)
+
+As stated on the "What Was Done Differently", there are portions of the file that have been changed since assigned.  As I continue to grow as a developer, I'll be inputing additional of my work from GitHub on the portfolio as well as reconstructing the layout of the page (such as the previous change when using Grid instead of Flex).  Keep an eye out for any updates on the portfolio itself!
+
+#  [Disclaimer](#disclaimer)
+
+The project is open for anyone to use.  As stated on the purpose, it's to help out those that are starting in making a portfolio of their own.
+
+#   [Website](#website)
